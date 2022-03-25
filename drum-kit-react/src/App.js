@@ -1,47 +1,22 @@
-import Key from './Key';
+import Key from "./components/Key/Key";
 
 function App() {
-	return (
-		<>
-			<div className="keys">
-				<div data-key="65" class="key">
-					<kbd>A</kbd>
-					<span class="sound">clap</span>
-				</div>
-				<div data-key="83" class="key">
-					<kbd>S</kbd>
-					<span class="sound">hihat</span>
-				</div>
-				<div data-key="68" class="key">
-					<kbd>D</kbd>
-					<span class="sound">kick</span>
-				</div>
-				<div data-key="70" class="key">
-					<kbd>F</kbd>
-					<span class="sound">openhat</span>
-				</div>
-				<div data-key="71" class="key">
-					<kbd>G</kbd>
-					<span class="sound">boom</span>
-				</div>
-				<div data-key="72" class="key">
-					<kbd>H</kbd>
-					<span class="sound">ride</span>
-				</div>
-				<div data-key="74" class="key">
-					<kbd>J</kbd>
-					<span class="sound">snare</span>
-				</div>
-				<div data-key="75" class="key">
-					<kbd>K</kbd>
-					<span class="sound">tom</span>
-				</div>
-				<div data-key="76" class="key">
-					<kbd>L</kbd>
-					<span class="sound">tink</span>
-				</div>
-			</div>
+	const keyValues = [
+		{ value: 65, letter: "A", sound: "clap" },
+		{ value: 83, letter: "S", sound: "hihat" },
+		{ value: 68, letter: "D", sound: "kick" },
+		{ value: 70, letter: "F", sound: "openhat" },
+		{ value: 71, letter: "G", sound: "boom" },
+		{ value: 72, letter: "H", sound: "ride" },
+		{ value: 74, letter: "J", sound: "snare" },
+		{ value: 75, letter: "K", sound: "tom" },
+		{ value: 76, letter: "L", sound: "tink" },
+    {}
+	];
 
+	return (
+		<div>
+			<Key keys={keyValues} />
 			<audio data-key="65" src="sounds/clap.wav"></audio>
 			<audio data-key="83" src="sounds/hihat.wav"></audio>
 			<audio data-key="68" src="sounds/kick.wav"></audio>
@@ -51,7 +26,7 @@ function App() {
 			<audio data-key="74" src="sounds/snare.wav"></audio>
 			<audio data-key="75" src="sounds/tom.wav"></audio>
 			<audio data-key="76" src="sounds/tink.wav"></audio>
-		</>
+		</div>
 	);
 }
 
