@@ -1,3 +1,4 @@
+import Audio from '../Audio/Audio';
 import styles from './Key.module.css';
 
 const Key = (props) => {
@@ -11,6 +12,8 @@ const Key = (props) => {
 				</div>
 			)
 		})}
+
+		<Audio soundKeys={props.keys} />
 	</div>
 	);
 };
